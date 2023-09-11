@@ -34,7 +34,6 @@ def delete_user(request, pk):
 def update_user(request, pk):
     try:
         user = User.objects.get(pk=pk)
-
         user.delete()
         form = UserForm
         return render(request, template_name='add_users.html', context={'form': form})
