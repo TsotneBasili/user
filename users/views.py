@@ -37,7 +37,7 @@ def update_user(request, pk):
 
         user.delete()
         form = UserForm
-        return render(request, template_name='add_updated_user.html', context={'form': form, "pk": pk})
+        return render(request, template_name='add_users.html', context={'form': form})
     except:
         return HttpResponse("Invalid ID")
 
