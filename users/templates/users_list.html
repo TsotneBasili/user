@@ -1,0 +1,7 @@
+{% if users %}
+    {% for user in users %}
+    <h1>ID: {{user.id}}, Name: {{ user.name }}, Lastname: {{ user.lastname }}, Email: {{ user.email }}, Age: {{ user.age }}</h1>
+    {% endfor %}
+{% else %}
+    <p> Users were not found </p>
+{% endif %}
